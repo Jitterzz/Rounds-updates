@@ -145,9 +145,9 @@
   <ul class="plain">
     <li><strong>Houses:</strong> customer names, addresses, phone numbers, notes (like gate codes), route day and order, price, and how often you visit.</li>
     <li><strong>Payments:</strong> amounts, how and when each house paid, notes, and check numbers and bank names when you enter or scan them.</li>
-    <li><strong>Settings:</strong> your theme, reminders, fingerprint lock, and where automatic backups are saved.</li>
+    <li><strong>Settings:</strong> your theme and paid colors, reminders, fingerprint lock, where automatic backups are saved, and bank names you've typed in for a check's routing number.</li>
   </ul>
-  <p>Rounds doesn't read your location or contacts. It only opens files you pick yourself, like a backup to restore or a spreadsheet to import.</p>
+  <p>Rounds doesn't read your location or contacts. It uses the camera only while the check scanner is open, and only opens files you pick yourself, like a backup to restore or a spreadsheet to import.</p>
 
   <h2>Your customers' information</h2>
   <p>The names, addresses and phone numbers you add belong to your customers. Rounds keeps them on your phone and uses them only to show your route and to open a call, text or directions when you tap.</p>
@@ -162,8 +162,9 @@
   </ul>
 
   <h2>Scanning checks</h2>
-  <p>Scanning a check uses Google's document scanner and text reader from Google Play services. The picture is read on your phone, and Rounds deletes its copy as soon as the check number, bank and amount are read. The picture and the text read from it aren't sent anywhere.</p>
-  <p>To keep these tools working, Google Play services may send Google basic technical details, such as your phone's model, Android version, app version and how well the scanner performed. Google explains this on its <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a> page.</p>
+  <p>Scanning a check uses your phone's camera inside Rounds, which asks for camera permission the first time. While the scanner is open, what the camera sees is read on your phone by Google's text reader from Google Play services, to find the check number, bank and amount. Each picture is dropped as soon as it's been read: Rounds keeps only what you save with the payment, and the pictures and the text read from them aren't sent anywhere.</p>
+  <p>To fill in the bank's name, Rounds uses the routing number printed along the bottom of the check, which identifies the bank, not you or your customer. If you type in a bank's name after a scan, Rounds remembers it for that routing number, on your phone only. Rounds never keeps the account number.</p>
+  <p>To keep the text reader working, Google Play services may send Google basic technical details, such as your phone's model, Android version, app version and how well the text reader performed. Google explains this on its <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a> page.</p>
 
   <h2>Fingerprint lock and reminders</h2>
   <p>The fingerprint lock uses Android's own fingerprint and PIN screen. Rounds never sees or stores your fingerprint or PIN.</p>
